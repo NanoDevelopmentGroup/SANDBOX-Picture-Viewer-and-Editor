@@ -2,6 +2,8 @@
 
 Public Class FormMainViewer
 
+    Private CurrentImage As Bitmap
+
 #Region "ButtonClicks"
 
     Private Sub Button_Open_Click(sender As Object, e As EventArgs) Handles Button_Open.Click
@@ -19,7 +21,7 @@ Public Class FormMainViewer
         End With
 
         If pictureFileDialog.ShowDialog() = DialogResult.OK Then
-
+            Display_Image(pictureFileDialog.FileName)
         End If
 
     End Sub
@@ -28,7 +30,14 @@ Public Class FormMainViewer
 
 #Region "Helper Functions"
 
+    Public Sub Display_Image(ByVal myPictureDirectory As String)
 
+        PictureBox_Main.SizeMode = PictureBoxSizeMode.AutoSize
+
+        CurrentImage = New Bitmap(myPictureDirectory)
+        PictureBox_Main.Image = CType(CurrentImage, Image)
+
+    End Sub
 
 #End Region
 
