@@ -35,6 +35,8 @@ Partial Class FormMainViewer
         '
         'TableLayoutPanel_MainViewer
         '
+        Me.TableLayoutPanel_MainViewer.AutoSize = True
+        Me.TableLayoutPanel_MainViewer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.TableLayoutPanel_MainViewer.ColumnCount = 1
         Me.TableLayoutPanel_MainViewer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel_MainViewer.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -99,6 +101,8 @@ Partial Class FormMainViewer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ClientSize = New System.Drawing.Size(784, 411)
         Me.Controls.Add(Me.TableLayoutPanel_MainViewer)
@@ -109,6 +113,7 @@ Partial Class FormMainViewer
         Me.TableLayoutPanel_ButtonDock.ResumeLayout(False)
         CType(Me.PictureBox_Main, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
